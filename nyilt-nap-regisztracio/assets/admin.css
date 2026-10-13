@@ -1,0 +1,166 @@
+/* Admin felület – a főoldal (home.css) vizuális nyelvéhez igazítva, tablet-first */
+.ad-page{--tone-lilac-bg:#f0efff;--tone-lilac:#736ce0;--tone-blue-bg:#eaf5ff;--tone-blue:#5593c2;--tone-mint-bg:#e9f8f1;--tone-mint:#56a389;--tone-peach-bg:#fff2e7;--tone-peach:#c18d55;
+  background:radial-gradient(ellipse at 6% 0%,rgba(219,215,255,.7),transparent 34%),radial-gradient(ellipse at 100% 12%,rgba(224,240,255,.7),transparent 30%),#f7f8fd;font-size:15px}
+.ad-page svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ad-tone-lilac{--bg:var(--tone-lilac-bg);--fg:var(--tone-lilac)}.ad-tone-blue{--bg:var(--tone-blue-bg);--fg:var(--tone-blue)}
+.ad-tone-mint{--bg:var(--tone-mint-bg);--fg:var(--tone-mint)}.ad-tone-peach{--bg:var(--tone-peach-bg);--fg:var(--tone-peach)}
+.ad-bg-lilac{background:#8d85eb}.ad-bg-blue{background:#74b0dc}.ad-bg-mint{background:#6cc3a4}.ad-bg-peach{background:#e8b47c}
+.ad-muted{color:#9a9bb0}
+
+/* Fejléc */
+.ad-header{display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(1240px,calc(100% - 40px));margin:0 auto;min-height:92px;flex-wrap:wrap;padding-block:14px}
+.ad-brand{display:flex;align-items:center;gap:14px}
+.ad-logo{max-width:64px;max-height:58px;object-fit:contain}
+.ad-logo-fallback{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--lavender);color:var(--purple)}
+.ad-logo-fallback svg{width:26px;height:26px}
+.ad-brand-copy{display:flex;flex-direction:column;line-height:1.2}
+.ad-brand-copy strong{font-family:var(--display);font-size:22px;font-weight:800;color:var(--ink)}
+.ad-brand-copy small{font-size:11px;font-weight:700;letter-spacing:1.8px;color:var(--muted)}
+.ad-header-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ad-user{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 14px;border-radius:13px;background:#fff;border:1px solid #e5e3fb;color:#54527a;font-weight:700;font-size:14px}
+.ad-user svg{width:19px;height:19px;color:var(--purple)}
+.ad-btn{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 16px;border:1px solid #dcd9fb;border-radius:13px;background:#fff;color:#4a4778;font-weight:700;font-size:14px;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+.ad-btn:hover{background:#f6f5ff;border-color:#bdb8f5}
+.ad-btn svg{width:19px;height:19px;color:var(--purple)}
+.ad-main{width:min(1240px,calc(100% - 40px));margin:0 auto;padding-bottom:30px}
+
+/* Cím és szakaszugrók */
+.ad-title{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:10px 0 26px}
+.ad-eyebrow{font-size:11px;font-weight:800;letter-spacing:1.6px;color:var(--purple)}
+.ad-title h1{margin:4px 0 0;font-family:var(--display);font-size:clamp(28px,3.4vw,38px);letter-spacing:-1px;line-height:1.15}
+.ad-jump{display:flex;gap:8px;flex-wrap:wrap}
+.ad-jump a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 15px;border-radius:999px;background:#fff;border:1px solid #e5e3fb;color:#54527a;font-weight:700;font-size:13.5px}
+.ad-jump a:hover{background:var(--lavender);border-color:#c9c5f6}
+.ad-jump svg{width:17px;height:17px;color:var(--purple)}
+
+/* Szakaszok */
+.ad-section{margin-bottom:34px;scroll-margin-top:16px}
+.ad-section-title{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:0 0 16px;font-family:var(--display);font-size:22px;letter-spacing:-.5px}
+.ad-section-title small{flex-basis:100%;margin-left:52px;font-family:var(--font);font-size:13.5px;font-weight:500;letter-spacing:0;color:var(--muted);line-height:1.5}
+.ad-h-icon{width:40px;height:40px;flex:0 0 auto;display:grid;place-items:center;border-radius:12px;background:var(--lavender);color:var(--purple)}
+.ad-h-icon svg{width:21px;height:21px}
+.ad-h-icon.sm{width:34px;height:34px;border-radius:10px}.ad-h-icon.sm svg{width:18px;height:18px}
+.ad-card{background:#fff;border:1px solid #e9e9f3;border-radius:18px;padding:20px 22px;box-shadow:0 5px 20px rgba(54,50,112,.035);min-width:0}
+.ad-card h3{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:0 0 18px;font-family:var(--display);font-size:16.5px;letter-spacing:-.2px}
+.ad-card h3 small{margin-left:auto;font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--muted)}
+.ad-empty{color:var(--muted);text-align:center}
+
+/* KPI kártyák */
+.ad-kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.ad-kpi{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e9e9f3;border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(54,50,112,.035);min-width:0}
+.ad-kpi-icon{width:52px;height:52px;flex:0 0 auto;display:grid;place-items:center;border-radius:15px;background:var(--bg);color:var(--fg)}
+.ad-kpi-icon svg{width:26px;height:26px}
+.ad-kpi-copy{display:flex;flex-direction:column;min-width:0}
+.ad-kpi-label{font-size:13px;font-weight:700;color:var(--muted)}
+.ad-kpi-value{font-family:var(--display);font-size:34px;line-height:1.1;letter-spacing:-1.2px;color:var(--ink)}
+.ad-kpi-sub{font-size:12.5px;color:#8a8ba2;line-height:1.45}.ad-kpi-sub b{color:var(--ink)}
+
+/* Profil */
+.ad-profile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ad-split-bar{display:flex;height:16px;border-radius:999px;overflow:hidden;background:#eef0f7;gap:3px}
+.ad-seg{display:block;min-width:0;border-radius:999px;transition:width .4s ease}
+.ad-split-legend{display:grid;gap:10px;margin-top:18px}
+.ad-legend-item{display:flex;align-items:center;gap:12px}
+.ad-legend-icon{width:38px;height:38px;flex:0 0 auto;display:grid;place-items:center;border-radius:11px;background:var(--bg);color:var(--fg)}
+.ad-legend-icon svg{width:19px;height:19px}
+.ad-legend-text{display:flex;flex-direction:column;line-height:1.3;min-width:0;flex:1}
+.ad-legend-text small{font-size:12.5px;color:var(--muted);font-weight:600}
+.ad-legend-text strong{font-size:16px}
+.ad-legend-item em{font-style:normal;font-family:var(--display);font-weight:800;font-size:18px;color:var(--ink)}
+.ad-matrix{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ad-cell{display:flex;flex-direction:column;justify-content:space-between;gap:8px;min-height:92px;padding:12px 13px;border-radius:14px;background:var(--bg);color:var(--fg)}
+.ad-cell span{display:flex;align-items:flex-start;gap:7px;font-size:12.5px;font-weight:700;line-height:1.35}
+.ad-cell span svg{width:16px;height:16px;flex:0 0 auto;margin-top:1px}
+.ad-cell strong{font-family:var(--display);font-size:28px;line-height:1;color:var(--ink)}
+.ad-cell-key{box-shadow:inset 0 0 0 2px rgba(115,108,224,.35)}
+
+/* Szakma kártyák – a főoldali kártyákhoz hasonló, azonos méretű kép + szöveg */
+.ad-specialty-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ad-spec{display:flex;flex-direction:column;background:#fff;border:1px solid #e9e9f3;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px rgba(54,50,112,.035)}
+.ad-spec-media{position:relative;aspect-ratio:16/9;background:#f0efff;overflow:hidden;flex:0 0 auto}
+.ad-spec:nth-child(3n+2) .ad-spec-media{background:#eaf5ff}.ad-spec:nth-child(3n+3) .ad-spec-media{background:#e9f8f1}
+.ad-spec-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ad-spec-icon{position:absolute;inset:0;display:grid;place-items:center;color:#7a74e0}
+.ad-spec-icon svg{width:44px;height:44px}
+.ad-rank{position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.92);color:#54527a;font-size:13px;font-weight:800;box-shadow:0 2px 8px rgba(40,36,100,.12)}
+.ad-rank svg{width:15px;height:15px}
+.ad-rank.is-top{background:#fff3d6;color:#a8741a}
+.ad-spec-body{display:flex;flex-direction:column;gap:12px;padding:16px 18px 18px;flex:1}
+.ad-spec-body h3{margin:0;font-family:var(--display);font-size:16.5px;line-height:1.3;min-height:2.6em;display:flex;align-items:flex-start}
+.ad-spec-main{display:flex;align-items:center;gap:12px}
+.ad-spec-main strong{font-family:var(--display);font-size:38px;line-height:1;letter-spacing:-1.5px;color:var(--purple)}
+.ad-spec-main span{font-size:13.5px;font-weight:700;line-height:1.35;color:var(--ink)}
+.ad-spec-main small{font-weight:500;color:var(--muted);font-size:12.5px}
+.ad-bar{height:9px;border-radius:999px;background:#eef0f7;overflow:hidden}
+.ad-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#625be0,#8b80ec)}
+.ad-bar.slim{height:7px}
+.ad-spec-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:2px 0 0}
+.ad-spec-stats div{padding:9px 10px;border-radius:12px;background:#f7f7fc;text-align:left}
+.ad-spec-stats dt{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--muted);line-height:1.25}
+.ad-spec-stats dt svg{width:14px;height:14px;flex:0 0 auto;color:var(--purple)}
+.ad-spec-stats dd{margin:3px 0 0;font-family:var(--display);font-size:20px;font-weight:800;color:var(--ink)}
+
+/* Idővonal és iskolák */
+.ad-two-col{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.ad-daily{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:6px;align-items:end;height:220px}
+.ad-day{display:flex;flex-direction:column;align-items:center;gap:5px;height:100%;min-width:0}
+.ad-day-count{height:16px;font-size:12px;font-weight:800;color:var(--ink)}
+.ad-day-bar{flex:1;width:100%;display:flex;align-items:flex-end;justify-content:center;border-radius:8px;background:#f3f3fa;overflow:hidden}
+.ad-day-bar i{display:block;width:100%;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#8b80ec,#625be0)}
+.ad-day.is-today .ad-day-bar{background:#e8e6ff}.ad-day.is-today .ad-day-label{color:var(--purple);font-weight:800}
+.ad-day-label{display:flex;flex-direction:column;align-items:center;font-size:10.5px;line-height:1.25;color:var(--muted);font-weight:600}
+.ad-day-label small{font-size:10px;font-weight:500;opacity:.85}
+.ad-schools{list-style:none;margin:0;padding:0;display:grid;gap:13px;counter-reset:s}
+.ad-school-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.ad-school-name{flex:1;min-width:0;font-weight:700;font-size:14px;overflow-wrap:anywhere}
+.ad-school-meta{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--muted);white-space:nowrap}
+.ad-school-meta svg,.ad-legend-note svg{width:14px;height:14px;color:var(--purple);margin-left:5px}
+.ad-school-meta svg:first-child{margin-left:0}
+.ad-school-row strong{min-width:28px;text-align:right;font-family:var(--display);font-size:18px;color:var(--purple)}
+.ad-legend-note{display:flex;align-items:center;margin:16px 0 0;font-size:12px;color:var(--muted)}
+.ad-legend-note svg:first-child{margin-left:0}
+
+/* Regisztrációk tábla – ikonok */
+.admin-panel .ad-h-icon{margin-right:10px;vertical-align:middle}
+.panel-heading h2{display:flex;align-items:center}
+.ad-id{display:block;color:#a0a0b2;font-size:11px;font-weight:500;margin-top:3px}
+.status-pill{display:inline-flex;align-items:center;gap:6px}
+.status-pill svg{width:14px;height:14px;flex:0 0 auto}
+.search-submit{display:inline-flex;align-items:center;gap:8px}
+.search-submit svg{width:17px;height:17px}
+.icon-delete{display:grid;place-items:center}
+.icon-delete svg{width:19px;height:19px}
+.admin-table{font-size:14px}
+.admin-footer{text-align:center}
+.ad-footlink{color:#7771dc;font-weight:700}
+.admin-flash{margin-bottom:18px}
+
+/* Tablet álló és kisebb */
+@media(max-width:1000px){
+  .ad-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ad-profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ad-card-matrix{grid-column:1/-1}
+  .ad-matrix{grid-template-columns:repeat(4,1fr)}
+  .ad-specialty-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ad-two-col{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .ad-header,.ad-main{width:calc(100% - 28px)}
+  .ad-brand-copy strong{font-size:19px}
+  .ad-btn span{display:none}.ad-btn{padding:0 13px}
+  .ad-kpi-value{font-size:30px}
+  .ad-profile-grid{grid-template-columns:1fr}
+  .ad-matrix{grid-template-columns:1fr 1fr}
+  .ad-specialty-grid{gap:12px}
+  .ad-spec-body{padding:13px 13px 15px}
+  .ad-spec-body h3{font-size:14.5px}
+  .ad-spec-main strong{font-size:32px}
+  .ad-spec-stats{grid-template-columns:1fr}
+  .ad-daily{gap:3px}
+  .ad-day-label small{display:none}
+}
+@media(max-width:480px){
+  .ad-kpi-grid,.ad-specialty-grid{grid-template-columns:1fr}
+  .ad-section-title small{margin-left:0}
+}
+.status-pill::before{display:none!important}
